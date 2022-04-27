@@ -52,8 +52,6 @@ find . -type f -name ".git*" -exec rm {} + &> /dev/null
 
 echo "Unpacking $addons_folder/$3"
 
-# find "$addons_folder/$3" -mindepth 1 -type d -print -exec mv {} . \; > /dev/null
-
 find "$addons_folder/$3" -mindepth 1 -maxdepth 1 -type d,f -print -exec mv {} . \; > /dev/null
 
 echo "Removing $addons_folder"
